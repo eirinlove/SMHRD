@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+		font-family: 'NanumSquare_acL';
+		src: url("fonts/NanumSquare_acL.ttf") format('truetype'); 
+        }
+        @font-face {
+		font-family: 'NanumSquare_acR';
+		src: url("fonts/NanumSquare_acR.ttf") format('truetype'); 
+        }
+        .section{
+            width:1200px;
+            margin:auto;
+        }
+        .question{
+            font-family: 'NanumSquare_acL';
+            font-size:40px;
+            animation: question_fadein 2.5s;
+            -moz-animation: question_fadein 2.5s;
+            -webkit-animation: question_fadein 2.5s;
+            -o-animation: question_fadein 2.5s;
+        }
+        .question_sub{
+            font-family: 'NanumSquare_acL';
+            font-size:17px;
+            opacity:0;
+            transition: all 1s;
+        }
+        .question:hover > .question_sub{
+            opacity:1;
+            color:#CD1039;
+            font-weight:200;
+            transition: all 1s;
+        }
+        @keyframes question_fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .answer button{
+            font-family: 'NanumSquare_acL';
+            font-size:20px;
+            border:none;
+            background:none;
+            transition: all 1s;
+        }
+        .img{
+            opacity:0.2;
+            transition: all 1s;
+            height:80px;
+        }
+        .answer:hover .img{
+            opacity:1;
+            transition: all 1s;
+            height:90px;
+        }
+        .answer:hover button{
+            font-size:25px;
+            transition: all 1s;
+        }
+        .answerbox{
+            margin:auto;
+            display:flex;
+            animation: answer_fadein 3s;
+            -moz-animation: answer_fadein 3s;
+            -webkit-animation: answer_fadein 3s;
+            -o-animation: answer_fadein 3s;
+            
+        }
+        .answerbox a{
+            margin:auto;
+        }
+        @keyframes answer_fadein {
+            0%{
+                opacity: 0;
+            }
+            30% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .status{
+            height:380px;
+            border-bottom: 3px solid red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+<!------------------------------ ▼ 상단 공통 헤더 ▼ ------------------------------>
+<div id="headers"></div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("../Header.jsp");
+});
+</script>
+<!------------------------------ ▲ 상단 공통 헤더 ▲ ------------------------------>
+
+<br><br><br><br>
+<div class="section" align="center">
+
+<span class="question">예산 범위를 설정해주세요.<br><span class="question_sub">예산에 맞는 견적을 구성하는데 참고합니다.</span></span><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+<div class="answerbox" width="1200px" align="center">
+
+    <a href=#><table class="answer"><tr><td align="center"><img class="img" src="images/1cheon.png" ></td></tr><tr><td align="center"><button>50만원 이하</button></td></tr></table></a>
+    <a href=#><table class="answer"><tr><td align="center"><img class="img" src="images/5cheon.png" ></td></tr><tr><td align="center"><button>80만원 이하</button></td></tr></table></a>
+    <a href="esti2.html"><table class="answer"><tr><td align="center"><img class="img" src="images/1man.png" ></td></tr><tr><td align="center"><button>150만원 이하</button></td></tr></table></a>
+    <a href=#><table class="answer"><tr><td align="center"><img class="img" src="images/5man.png" ></td></tr><tr><td align="center"><button>200만원 이상</button></td></tr></table></a>
+</div>
+</div>
+<br>
+</body>
+</html>

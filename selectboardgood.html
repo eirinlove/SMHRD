@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .sort-items {
+            width: 100%;
+            background-color: wheat;
+            padding: 30px 15px;
+        }
+        .checkbox-wrap{
+        
+            display: flex;
+            flex-direction: row;
+        }
+
+        .checkbox-container {
+       
+            display: inline-flex;
+            flex-direction: column;
+            width: 70px;
+        }
+
+        .checkbox-list {
+			width:70px; 
+			height:110px;
+        	overflow : scroll;
+        }
+  
+    </style>
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sort-items">
+       <a href="낮은가격">낮은가격</a>
+        <a href="높은가격">높은가격</a>
+          <input type="text" name="return" id="money" value="원"> ~
+			<input type="text" name="return" id="money" value="원">
+			 <input type="button" name="return" id="search" value="검색">
+	        	<select name="count">
+	    <option value="">선택보기</option>
+	    <option value="10">10개</option>
+	    <option value="20">20개</option>
+	    <option value="30">30개</option>
+	    <option value="40">40개</option>
+	</select>
+    </div>
+    <div id="checkbox-wrap">
+        <div class="checkbox-container">
+            <div class="checkbox-header">
+                <span>Header</span>
+            </div>
+            <div class="checkbox-list">
+                <input type="checkbox" name="" id="cb1"><label for="cb1">Test</label>
+                <input type="checkbox" name="" id="cb2"><label for="cb2">Test</label>
+                <input type="checkbox" name="" id="cb3"><label for="cb3">Test</label>
+                <input type="checkbox" name="" id="cb4"><label for="cb4">Test</label>
+                <input type="checkbox" name="" id="cb5"><label for="cb5">Test</label>
+          
+            </div>
+        </div>
+        <div class="checkbox-container">
+            <div class="checkbox-header">
+                <span>Header</span>
+            </div>
+            <div class="checkbox-list">
+                <input type="checkbox" name="" id="cb1"><label for="cb1">Test</label>
+                <input type="checkbox" name="" id="cb2"><label for="cb2">Test</label>
+                <input type="checkbox" name="" id="cb3"><label for="cb3">Test</label>
+                <input type="checkbox" name="" id="cb4"><label for="cb4">Test</label>
+                <input type="checkbox" name="" id="cb5"><label for="cb5">Test</label>
+            </div>
+        </div>
+        <div class="checkbox-container">
+            <div class="checkbox-header">
+                <span>Header</span>
+            </div>
+            <div class="checkbox-list">
+                <input type="checkbox" name="" id="cb1"><label for="cb1">Test</label>
+                <input type="checkbox" name="" id="cb2"><label for="cb2">Test</label>
+                <input type="checkbox" name="" id="cb3"><label for="cb3">Test</label>
+                <input type="checkbox" name="" id="cb4"><label for="cb4">Test</label>
+                <input type="checkbox" name="" id="cb5"><label for="cb5">Test</label>
+            </div>
+        </div>
+        <div class="checkbox-container">
+            <div class="checkbox-header">
+                <span>Header</span>
+            </div>
+            <div class="checkbox-list">
+                <input type="checkbox" name="" id="cb1"><label for="cb1">Test</label>
+                <input type="checkbox" name="" id="cb2"><label for="cb2">Test</label>
+                <input type="checkbox" name="" id="cb3"><label for="cb3">Test</label>
+                <input type="checkbox" name="" id="cb4"><label for="cb4">Test</label>
+                <input type="checkbox" name="" id="cb5"><label for="cb5">Test</label>
+            </div>
+        </div>
+    </div>
+    
+	<div>
+    <img src="mainimg/DDR3.1.jpg" height="100" width="100" border=0 hspace="3" vspace="5" align=left>
+	<br><br>
+	삼성전자 DDR3<br>
+	데스크탑용/DDR3
+	44300원 , 포인트:0원
+	 <input type="button" name="gift" id="button" value="관심상품">
+	 <input type="button" name="basket" id="button" value="장바구니">
+	 <input type="button" name="buy" id="button" value="바로구매">
+    </div>
+</body>
+</html>

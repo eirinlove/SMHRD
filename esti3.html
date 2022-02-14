@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+		font-family: 'NanumSquare_acL';
+		src: url("fonts/NanumSquare_acL.ttf") format('truetype'); 
+        }
+        @font-face {
+		font-family: 'NanumSquare_acR';
+		src: url("fonts/NanumSquare_acR.ttf") format('truetype'); 
+        }
+        .section{
+            width:1200px;
+            margin:auto;
+        }
+        .question{
+            font-family: 'NanumSquare_acL';
+            font-size:40px;
+            animation: question_fadein 2.5s;
+            -moz-animation: question_fadein 2.5s;
+            -webkit-animation: question_fadein 2.5s;
+            -o-animation: question_fadein 2.5s;
+        }
+        .question_sub{
+            font-family: 'NanumSquare_acL';
+            font-size:17px;
+            opacity:0;
+            transition: all 1s;
+        }
+        .question:hover > .question_sub{
+            opacity:1;
+            color:#CD1039;
+            font-weight:200;
+            transition: all 1s;
+        }
+        @keyframes question_fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .answer button{
+            font-family: 'NanumSquare_acL';
+            font-size:20px;
+            border:none;
+            background:none;
+            transition: all 1s;
+        }
+        .img{
+            opacity:0.2;
+            transition: all 1s;
+            height:150px;
+        }
+        .answer:hover .img{
+            opacity:1;
+            transition: all 1s;
+            height:160px;
+        }
+        #pubgbtn:hover + #pubgvideo{
+            opacity:0.3;
+            transition: all 1s;
+        }
+        #lostarkbtn:hover + #lostarkvideo{
+            opacity:0.3;
+            transition: all 1s;
+        }
+        #maplebtn:hover + #maplevideo{
+            opacity:0.3;
+            transition: all 1s;
+        }
+        #overwatchbtn:hover + #overwatchvideo{
+            opacity:0.3;
+            transition: all 1s;
+        }
+        #cyberpunkbtn:hover + #cyberpunkvideo{
+            opacity:0.3;
+            transition: all 1s;
+        }
+        .answer:hover button{
+            font-size:25px;
+            transition: all 1s;
+        }
+        .answerbox{
+            margin:auto;
+            display:flex;
+            animation: answer_fadein 3s;
+            -moz-animation: answer_fadein 3s;
+            -webkit-animation: answer_fadein 3s;
+            -o-animation: answer_fadein 3s;
+            
+        }
+        .answerbox a{
+            margin:auto;
+        }
+        @keyframes answer_fadein {
+            0%{
+                opacity: 0;
+            }
+            30% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .status{
+            height:380px;
+            border-bottom: 3px solid red;
+        }
+        .post-slider{
+            margin:auto;
+        }
+        .videobcg {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1000;
+        overflow: hidden;
+        opacity:0;
+        transition: all 1s;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+<!------------------------------ ▼ 상단 공통 헤더 ▼ ------------------------------>
+<div id="headers"></div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("Header.jsp");
+});
+</script>
+<!------------------------------ ▲ 상단 공통 헤더 ▲ ------------------------------>
+<br><br><br><br>
+<div class="section" align="center">
+
+<span class="question">플레이 할 게임을 선택해주세요.<br><span class="question_sub">게임은 요구사양이 다양하므로 선택된 게임의 요구사양을 참고합니다.</span></span><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+<div class="answerbox" width="1200px" align="center">
+    <a href="esti4.html"><table class="answer" ><tr><td align="center">
+        <img class="img" src="images/BattleGround.png" id="pubgbtn">
+                <video id="pubgvideo" class="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                    <source src="videos/pubg.mp4" type="video/mp4">
+                    <source src="videos/pubg.mp4" type="video/webm">
+                        Sorry, your browser does not support HTML5 video.
+                </video>
+        </td></tr></table></a>
+    <a href=#><table class="answer" ><tr><td align="center">
+        <img class="img" src="images/Lostark.png" id="lostarkbtn">
+                <video id="lostarkvideo" class="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                    <source src="videos/lostark.mp4" type="video/mp4">
+                    <source src="videos/lostark.mp4" type="video/webm">
+                        Sorry, your browser does not support HTML5 video.
+                </video>
+        </td></tr></table></a>
+    <a href=#><table class="answer"><tr><td align="center">
+        <img class="img" src="images/maplestory.png" id="maplebtn">
+                <video id="maplevideo" class="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                    <source src="videos/maplestory.mp4" type="video/dmp4">
+                    <source src="videos/maplestory.mp4" type="video/webm">
+                        Sorry, your browser does not support HTML5 video.
+                </video>
+        </td></tr></table></a>
+    <a href=#><table class="answer"><tr><td align="center">
+        <img class="img" src="images/overwatch.png" id="overwatchbtn">
+                 <video id="overwatchvideo" class="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                    <source src="videos/overwatch.mp4" type="video/dmp4">
+                    <source src="videos/overwatch.mp4" type="video/webm">
+                        Sorry, your browser does not support HTML5 video.
+                </video>
+        </td></tr></table></a>
+    <a href=#><table class="answer"><tr><td align="center">
+        <img class="img" src="images/Cyberpunk.png" id="cyberpunkbtn" >
+                <video id="cyberpunkvideo" class="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                    <source src="videos/cyberpunk.mp4" type="video/dmp4">
+                    <source src="videos/cyberpunk.mp4" type="video/webm">
+                        Sorry, your browser does not support HTML5 video.
+                </video>
+        </td></tr></table></a>
+</div>
+
+</div>
+<br>
+</body>
+</html>

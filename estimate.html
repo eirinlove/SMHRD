@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="EUC-KR">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:auto;
+        }
+        
+        @font-face {
+		font-family: 'NanumSquareB';
+		src: url("fonts/NanumSquareB.ttf") format('truetype'); 
+        }
+        .section{
+            margin-top:30px;
+            width:100%;
+            height:1000px;
+            background-color: aqua;
+        }
+        .estimate{
+            width:1200px;
+            display: flex;
+            margin:auto;
+        }
+        .estimate a:link{ text-decoration:none;} 
+        .estimate a:visited{ text-decoration:none;} 
+        .estimate a:active{ text-decoration:none;} 
+        .estimate a:hover{ text-decoration:none;} 
+        .estimate_category{
+            width:600px;
+            height:850px;
+            overflow-y : scroll;
+            overflow-x : hidden;
+            background-color:coral;
+        }
+
+        .products{
+            border-bottom: 1px solid #999999;
+            background-color:#FFFFFF;
+        }
+        .products_id{
+            font-family: 'NanumSquareB';
+            font-size:17px;
+            color:black;
+        }
+        .products_spec{
+            font-size:8px;
+            color:#999999;
+        }
+        .products_price{
+            font-family: 'NanumSquareB';
+            font-size:17px;
+            color:black;
+        }
+        .products_btn{
+            width:50px;
+            height:30px;
+            background-color: #f8f8f8;
+            color: #888;
+            border: 1px solid #e8e8e8;
+            font-size: 12px;
+            letter-spacing: 0px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 3px 5px; 
+        }
+        .products_btn:hover{
+            background-color: #EB0000;
+            color: #FFFFFF;
+            transition: all 1.1s;
+        }
+        .products:hover{
+            background:#F9F9F9;
+
+        }
+        .estimate_list{
+            width:600px;
+            height:850px;
+            overflow-y : scroll;
+            background-color:darkgoldenrod;
+        }
+        .estimate_listsort{
+            border-bottom: 1px solid #999999;
+            background-color:#FFFFFF;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    
+    
+<!------------------------------ ▼ 상단 공통 헤더 ▼ ------------------------------>
+<div id="headers"></div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("Header.html");
+});
+</script>
+<!------------------------------ ▲ 상단 공통 헤더 ▲ ------------------------------>
+
+<div class="section">  
+    
+    
+    
+    
+        <table class="sortitems_combobox">
+        <td>CPU 제조사</td>
+        <td>
+        <select name="company">
+    	<option value="null" selected="selected">CPU 제조사 선택</option>
+    	<option value="intel">인텔</option>
+    	<option value="amd">암드</option>
+        </select>           
+        </td>
+        </table>
+
+            
+        <table class="sortitems_combobox">
+        <td>코어 수</td>
+        <td>
+        <select name="core">
+    	<option value="null" selected="selected">코어 구분</option>
+    	<option value="8">8코어</option>
+    	<option value="4">4코어</option>
+    	<option value="16">16코어</option>
+        </select>           
+        </td>
+        </table>
+
+        
+        <table class="sortitems_combobox">
+        <td>Intel 소켓</td>
+        <td>
+        <select name="socket_i">
+    	<option value="null" selected="selected">인텔 소켓 구분</option>
+    	<option value="1151v2">1151</option>
+    	<option value="1150">1150</option>
+    	<option value="775">775</option>
+        </select>           
+        </td>
+        </table>
+    
+         
+        <table class="sortitems_combobox">
+        <td>AMD 소켓</td>
+        <td>
+        <select name="socket_a">
+    	<option value="null" selected="selected">AMD 소켓구분</option>
+    	<option value="am4">am4</option>
+    	<option value="am3">am3</option>
+    	<option value="am2">am2</option>
+        </select>           
+        </td>
+        </table>       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="estimate">
+        
+<!------------------------------ ▼ 견적 카테고리 ▼ ------------------------------>
+        <div class="estimate_category" id="cpu">
+            <!----- 여기부터 ----->
+            <a href=#><div class="products"> <!-- href안에 상품페이지 주소로 연결되게-->
+                <table width="580px">
+                    <tr>
+                        <td width="80px" height="80px" class="products_img">
+                            <img src="images/Ryzen5%204650G.png" width="80px">
+                        </td>
+                        <td align="left" >
+                            <span class="products_id">모델명: Ryzen5 4650G</span><br>
+                            <span class="products_spec">
+                                칩셋제조사: amd /
+                                아키텍처: 마티스 /
+                                코어 수: 6 /
+                                쓰레드 수: 12 /
+                                모델명: Ryzen5 4650G /
+                                클럭: 3.7ghz /
+                                부스트 클럭: 4.2ghz /
+                                공정: 7nm /
+                                TDP: 65W /
+                            </span>
+                        </td>
+                        <td align="right" class="products_price" rowspan="2"  width="100px">
+                            230,900원
+                        </td>
+                        <td align="center" rowspan="2">
+                                <button class="products_btn" name="gift" id="button">담기
+                            </div>
+                        </td>
+                    </table>
+                    </div></a>
+            <!----- 여기까지 반복문 씌우면 됨 ----->
+        </div>
+<!------------------------------ ▲ 견적 카테고리 ▲ ------------------------------>        
+
+<!------------------------------- ▼ 견적 리스트 ▼ ------------------------------->
+        <div class="estimate_list">
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="cpu" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="mother" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="mem" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="gpu" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="power" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="device" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="cooler" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="case" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="keyboard" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="mouse" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+            <div class="estimate_listsort">
+            <table width="580px" border="1px">
+                <tr>
+                    <td align="center" width="80px" height="50px">
+                        <form action ="estimateObject">
+                            <input type="submit" value="monitor" name="product">
+                        </from>
+                    </td>
+                    <td align="center">제품을 선택해주세요</td>
+                    <!-- 선택하면 이부분이 제품명으로 바뀌게 -->
+                </tr>
+            </table>
+            </div>
+        </div>
+<!------------------------------- ▲ 견적 리스트 ▲ ------------------------------->
+    </div>
+</div>
+
+    
+
+</body>
+</html>
